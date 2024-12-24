@@ -14,42 +14,31 @@ currency-conversion-app/ ├── backend/ │ ├── server.js │ ├─�
    ```bash
    cd backend
    npm install
+   ```
 Create a .env file in the backend folder and add the following:
 
+```bash
 MONGO_URI=mongodb://localhost:27017/currencyDB
+```
 Start the Backend server:
-
+```bash
 npm start
+```
 Frontend Setup
 Navigate to the Frontend folder:
-
+```bash
 cd frontend
 npm install
+```
 Create a .env file in the frontend folder and add the following:
-
+```bash
 REACT_APP_API_URL=http://localhost:3000/api
 Start the Frontend project:
-
+```
+```bash
 npm start
-Run Both Backend and Frontend Together
-Install concurrently in the root folder of the project:
+```
 
-npm install concurrently --save-dev
-Edit the package.json file in the root folder to add the following scripts:
-
-{
-  "name": "currency-conversion-app",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd backend && npm start",
-    "client": "cd frontend && npm start"
-  },
-  "devDependencies": {
-    "concurrently": "^7.0.0"
-  }
-}
-Run both Backend and Frontend together:
 
 npm start
 Testing
