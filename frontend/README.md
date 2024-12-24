@@ -22,7 +22,8 @@ MONGO_URI=mongodb://localhost:27017/currencyDB
 ```
 Start the Backend server:
 ```bash
-npm start
+cd backend
+node server.js
 ```
 Frontend Setup
 Navigate to the Frontend folder:
@@ -39,22 +40,35 @@ Start the Frontend project:
 npm start
 ```
 
+***Testing
+# Currency Conversion App
 
-npm start
-Testing
-Open your browser and go to http://localhost:3000
-Enter the currency conversion details and click the "Convert" button
-Check the results and verify the logs in the server console for more details
-Sample Test Data
-From Currency: AFN
-To Currency: AED
-Amount: 1
-Conversion Example
-If you enter from=AFN, to=AED, and amount=1
-The exchange rate from the API is 1 AFN = 0.05245 AED
-The result will be 0.05245 AED
-Explanation of Functionality
-Backend:
+## Steps to Use
+1. Open your browser and go to [http://localhost:3000](http://localhost:3000).
+2. Enter the currency conversion details and click the **"Convert"** button.
+3. Check the results and verify the logs in the server console for more details.
+
+## Sample Test Data
+- **From Currency**: AFN  
+- **To Currency**: AED  
+- **Amount**: 1  
+
+## Conversion Example
+If you enter the following:
+- **From**: AFN  
+- **To**: AED  
+- **Amount**: 1  
+
+The API provides the exchange rate:  
+`1 AFN = 0.05245 AED`  
+
+The result will be:  
+`0.05245 AED`
+
+## Explanation of Functionality
+### Backend:
+- Description of backend functionalities.
+
 
 The Node.js server uses Express to create the API
 Connects to MongoDB to log currency conversion activities
